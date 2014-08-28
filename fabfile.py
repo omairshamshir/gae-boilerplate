@@ -11,17 +11,7 @@ def lang(mode="extract"):
     """
         REQUIREMENTS:
 
-        - Install before pip with distribute_setup.py (Read the environment setup document)
-        - sudo pip install babel
-        - sudo pip install jinja2
-
-        HOW TO RUN:
-
-            option 1) fab lang
-            option 2) fab lang:compile
-    """
-
-    if mode == "compile":
+        - Instaasd
         local("pybabel compile -f -d ./locale")
     else:
         local("pybabel extract -F ./locale/babel.cfg -o ./locale/messages.pot ./ --sort-output --no-location --omit-header")
